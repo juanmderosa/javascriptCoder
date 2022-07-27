@@ -5,7 +5,7 @@ const stockProductos = [
         id: 1,
         nombreProducto: "Guitarra Clásica",
         precio : 1000,
-        img: "../assets/img/tienda1.png",
+        img: "./assets/img/tienda1.png",
         cantidad: 1,
         descripcion: "Marca: Antigua Casa Nuñez"
     },
@@ -13,7 +13,7 @@ const stockProductos = [
         id: 2,
         nombreProducto: "Guitarra Acústica",
         precio : 1500,
-        img: "../assets/img/tienda2.png",
+        img: "./assets/img/tienda2.png",
         cantidad: 1,
         descripcion: "Marca: Fender"
     },
@@ -21,7 +21,7 @@ const stockProductos = [
         id: 3,
         nombreProducto: "Guitarra Eléctrica",
         precio : 2000,
-        img: "../assets/img/tienda3.png",
+        img: "./assets/img/tienda3.png",
         cantidad: 1,
         descripcion: "Marca: Fender"
     },
@@ -29,7 +29,7 @@ const stockProductos = [
         id: 4,
         nombreProducto: "Bajo Eléctrico",
         precio : 2500,
-        img: "../assets/img/tienda4.png",
+        img: "./assets/img/tienda4.png",
         cantidad: 1,
         descripcion: "Marca: Fender"
     },
@@ -37,7 +37,7 @@ const stockProductos = [
         id: 5,
         nombreProducto: "Piano Eléctrico",
         precio : 3000,
-        img: "../assets/img/tienda5.png",
+        img: "./assets/img/tienda5.png",
         cantidad: 1,
         descripcion: "Marca: Artesia"
     },
@@ -45,7 +45,7 @@ const stockProductos = [
         id: 6,
         nombreProducto: "Batería",
         precio : 5000,
-        img: "../assets/img/tienda6.png",
+        img: "./assets/img/tienda6.png",
         cantidad: 1,
         descripcion: "Marca: Yamaha"
     }

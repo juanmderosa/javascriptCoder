@@ -1,60 +1,6 @@
-//Produtos en venta
-const stockProductos = [
-
-    {
-        id: 1,
-        nombreProducto: "Guitarra Clásica",
-        precio : 1000,
-        img: "./assets/img/tienda1.png",
-        cantidad: 1,
-        descripcion: "Marca: Antigua Casa Nuñez"
-    },
-    {
-        id: 2,
-        nombreProducto: "Guitarra Acústica",
-        precio : 1500,
-        img: "./assets/img/tienda2.png",
-        cantidad: 1,
-        descripcion: "Marca: Fender"
-    },
-    {
-        id: 3,
-        nombreProducto: "Guitarra Eléctrica",
-        precio : 2000,
-        img: "./assets/img/tienda3.png",
-        cantidad: 1,
-        descripcion: "Marca: Fender"
-    },
-    {
-        id: 4,
-        nombreProducto: "Bajo Eléctrico",
-        precio : 2500,
-        img: "./assets/img/tienda4.png",
-        cantidad: 1,
-        descripcion: "Marca: Fender"
-    },
-    {
-        id: 5,
-        nombreProducto: "Piano Eléctrico",
-        precio : 3000,
-        img: "./assets/img/tienda5.png",
-        cantidad: 1,
-        descripcion: "Marca: Artesia"
-    },
-    {
-        id: 6,
-        nombreProducto: "Batería",
-        precio : 5000,
-        img: "./assets/img/tienda6.png",
-        cantidad: 1,
-        descripcion: "Marca: Yamaha"
-    }
-
-]
-
 let carrito = [];
 
-const API = "../stock.json";
+const API = "data.json";
 
 const getData = async () => {
     try {
@@ -67,13 +13,14 @@ const getData = async () => {
     }
 }
 
-
 //Función que renderiza los Productos
-function mostrarProductos(){
+const mostrarProductos = async () => {
 
-    const contenedorProductos = document.getElementById('contenedor-productos')
+    const contenedorProductos = document.getElementById('contenedor-productos');
 
-    stockProductos.forEach((producto) => {
+    const productosEnVenta  = await getData();
+
+    productosEnVenta.forEach((producto) => {
         const div = document.createElement('div')
         div.classList.add('productos')
         div.innerHTML = 
@@ -98,7 +45,7 @@ function mostrarProductos(){
     
     
         boton.addEventListener('click', () => {
-            agregarAlCarrito(producto.id)
+            agregarAlCarrito(producto.id, productosEnVenta)
         })
 
         boton.addEventListener("click", ()=>{
@@ -167,9 +114,9 @@ const mostrarCarrito = () => {
 }
 
 //Función para agregar productos al carrito
-const agregarAlCarrito = (prodId) => {
+const agregarAlCarrito = async (prodId,productosEnVenta) => {
 
-    const producto = stockProductos.find((prod) => prod.id === prodId);
+    const producto = await productosEnVenta.find((prod) => prod.id === prodId);
 
     const productoAgregado = carrito.find((prod) => prod.id === prodId);
 

@@ -8,6 +8,10 @@
     width: 60px;
 }
 
+.tituloTienda{
+    font-size: 1.7rem;
+}
+
 .cardPrice{
     font-weight: 700;
 }
@@ -22,14 +26,6 @@
 .iconCarrito{
     width: 30px;
     
-}
-
-.cardCarritoContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
 }
 
 .productos {
@@ -52,35 +48,12 @@
     margin-bottom: 10px;
 }
 
-.descripcionCardCarrito{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.imgCardCarrito{
-    width: 10%;
-}
-
-.totalPedido{
-    margin-top: 10px;
-    font-size: 1.5rem;
-    text-decoration: underline;
-}
-
 .btnInicio{
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: 400;
     font-size: 1rem;
 }
-
-.detalleCarritoContainer{
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
 
 .detalleCarritoContainer{
     border: 1px solid black;

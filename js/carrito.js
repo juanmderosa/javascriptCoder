@@ -1,5 +1,7 @@
 let carrito = [];
 
+
+//Función que trae los datos del JSON.
 const API = "data.json";
 
 const getData = async () => {

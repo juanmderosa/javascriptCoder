@@ -135,7 +135,7 @@ const agregarAlCarrito = async (prodId,productosEnVenta) => {
 
     mostrarCarrito()
     guardarCarritoStorage(carrito)
-    obtenerCarritoStorage()
+
 }
 
 
@@ -196,7 +196,7 @@ const guardarCarritoStorage = (carrito) => {
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("guardarCarritoStorage")) {
     
-    carrito= JSON.parse(localStorage.getItem("guardarCarritoStorage"));
+    carrito= JSON.parse(localStorage.getItem("guardarCarritoStorage")) || [];
     mostrarCarrito()
     }
 })
